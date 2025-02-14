@@ -52,10 +52,38 @@ This repository contains several small and practical Python projects developed f
 - Generates vocabulary quizzes  
 - Supports multiple languages  
 
-## 🚀 How to Use  
+## 📥 How to Download a Specific Folder  
+If you only want to download a specific folder from the repository, you can use **Downgit**:  
 
-### Clone the Repository  
-First, clone this repository using Git:  
-```bash
-git clone https://github.com/your-username/python-projects.git
-cd python-projects
+### ✅ Using Downgit (The Easiest Method)  
+This tool allows you to download only a specific folder from a repository.  
+
+🔗 **Link:** [https://downgit.github.io](https://downgit.github.io)  
+
+#### **Steps:**  
+1. Go to the **GitHub repository** page.  
+2. Open the **desired folder**.  
+3. Copy the **URL link** from the browser.  
+4. Visit **Downgit** and paste the link into the input field.  
+5. Click **Download** to get only that folder.  
+
+---
+
+## 📜 License  
+This project is open-source and available under the **MIT License**.  
+
+---
+
+## 🤝 Contributing  
+Contributions are welcome! Feel free to:  
+- Add new projects  
+- Improve existing ones  
+- Fix bugs and optimize the code  
+
+If you make any changes, please submit a pull request.  
+
+---
+
+## 📞 Contact  
+For any questions or suggestions, feel free to reach out via **GitHub Issues**.  
+

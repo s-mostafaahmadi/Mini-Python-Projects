@@ -1,89 +1,56 @@
-# 📂 Python Projects Collection  
+# Mini-Python-Projects
 
-This repository contains several small and practical Python projects developed for various purposes. Each project is placed in a separate folder, with descriptions provided below.  
+![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white)
+![Platform](https://img.shields.io/badge/platform-Windows-0078D4?logo=windows&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-## 📌 Projects  
+A toolbox of small, self-contained Python utilities. Each project lives in its own folder, runs on its own, and solves one everyday problem — from taking a clean screenshot to drilling German vocabulary.
 
-### 🖼 EasyScreenshot  
-📌 **Description:** A simple and fast screenshot-taking application.  
-📌 **Features:**  
-- Save images in multiple formats  
-- Configure keyboard shortcuts  
+## Projects
 
-### 🔐 Encryption  
-📌 **Description:** A tool for encrypting and decrypting data.  
-📌 **Features:**  
-- Supports multiple encryption algorithms  
-- Encrypts both text and files  
+| Project | What it does | Highlights |
+| --- | --- | --- |
+| [`EasyScreenshot/`](EasyScreenshot) | Quick screenshot tool | Timestamped filenames, autostart configuration, hotkey helper |
+| [`Encryption/`](Encryption) | Encrypt / decrypt text and files | Reusable `Encryption.py` / `Decryption.py` modules plus a Tkinter app |
+| [`MiniTranslator/`](MiniTranslator) | Small translation app | Tkinter GUI over a translation API, German ↔ Persian focus |
+| [`SortData/`](SortData) | Sorts numerical and textual data | Prepares and sorts CSV input (`preparing.py` + `Sort_Data.py`) |
+| [`TextSeparation/`](TextSeparation) | Splits mixed text into parts | Reads `INPUT.txt`, writes the separated result to `OUTPUT.txt` |
+| [`TextToMp3/`](TextToMp3) | Text-to-speech | `gTTS` output saved under `SavedFiles/<timestamp>/` |
+| [`Typist(DE_FA)/`](Typist(DE_FA)) | Typing / dictation helper | German and Persian layouts, documentation in EN / DE / FA |
+| [`WordQuestion/`](WordQuestion) | Vocabulary quiz | Random questions from `saved.txt`, answers stored back to the file |
 
-### 🌍 MiniTranslator  
-📌 **Description:** A small translator for converting text between different languages.  
-📌 **Features:**  
-- Supports Persian and German translations  
-- Uses translation API  
+## Layout
 
-### 📊 SortData  
-📌 **Description:** A tool for sorting textual and numerical data.  
-📌 **Features:**  
-- Sorts alphabetically or numerically  
-- Supports CSV files  
+```mermaid
+flowchart LR
+    A[Small CLI or Tkinter app] --> B{Does it call a service?}
+    B -->|yes| C[Translation / TTS API]
+    B -->|no| D[Local files<br/>CSV · TXT · PNG · MP3]
+    C --> E[Saved output]
+    D --> E
+```
 
-### ✂ TextSeparation  
-📌 **Description:** A tool to separate mixed texts into different parts.  
-📌 **Features:**  
-- Identifies and separates words  
-- Saves the output to a file  
+## Requirements
 
-### 🔊 TextToMp3  
-📌 **Description:** Converts text to speech and saves it as an MP3 file.  
-📌 **Features:**  
-- Supports multiple languages  
-- Adjusts speed and tone of speech  
+Python 3.9+ on Windows. Install what a given folder needs:
 
-### ⌨ Typist (DE_FA)  
-📌 **Description:** A typing practice application for German and Persian languages.  
-📌 **Features:**  
-- Displays typing speed  
-- Provides random sentence exercises  
+```bash
+pip install pillow pyperclip gtts googletrans==4.0.0-rc1
+```
 
-### ❓ WordQuestion  
-📌 **Description:** A vocabulary practice program using quiz-style questions.  
-📌 **Features:**  
-- Generates vocabulary quizzes  
-- Supports multiple languages  
+Prebuilt `.exe` files are included for `EasyScreenshot`, `Encryption` and `MiniTranslator`.
 
-## 📥 How to Download a Specific Folder  
-If you only want to download a specific folder from the repository, you can use **Downgit**:  
+## Run
 
-### ✅ Using Downgit (The Easiest Method)  
-This tool allows you to download only a specific folder from a repository.  
+```bash
+python EasyScreenshot/screenshot.py
+python MiniTranslator/MiniTranslator.py
+python TextToMp3/Text_to_mp3.py
+python "WordQuestion/word question.py"
+```
 
-🔗 **Link:** [https://downgit.github.io](https://downgit.github.io)  
+Each folder also carries its own short `README` describing its inputs and outputs.
 
-#### **Steps:**  
-1. Go to the **GitHub repository** page.  
-2. Open the **desired folder**.  
-3. Copy the **URL link** from the browser.  
-4. Visit **Downgit** and paste the link into the input field.  
-5. Click **Download** to get only that folder.  
+## License
 
----
-
-## 📜 License  
-This project is open-source and available under the **MIT License**.  
-
----
-
-## 🤝 Contributing  
-Contributions are welcome! Feel free to:  
-- Add new projects  
-- Improve existing ones  
-- Fix bugs and optimize the code  
-
-If you make any changes, please submit a pull request.  
-
----
-
-## 📞 Contact  
-For any questions or suggestions, feel free to reach out via **GitHub Issues**.  
-
+MIT — see [LICENSE](LICENSE) where present. Contributions and small fixes are welcome.
